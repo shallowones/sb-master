@@ -1,0 +1,107 @@
+extends layout
+
+block content
+
+  -
+    var works = [
+      'Винтовые сваи — Набережная',
+      'Винтовые сваи — Дорожник',
+      'Винтовые сваи — Черемхи-1',
+      'Винтовые сваи — Черемхи(2)',
+      'Винтовые сваи — Черемхи',
+      'Винтовые сваи — Черемхи-1'
+    ]
+
+  .mobile
+    .wrapper
+      nav.mobile-menu
+        ul
+          li
+            a(href="#") Услуги
+          li
+            a(href="#") О компании
+          li.parent
+            span Наши работы
+            ul
+              li.active
+                a(href="#") Меню 1
+              li
+                a(href="#") Меню 2
+              li
+                a(href="#") Меню 3
+          li.parent
+            span Цены
+            ul
+              li
+                a(href="#") Меню 1
+              li
+                a(href="#") Меню 2
+              li
+                a(href="#") Меню 3
+          li
+            a(href="#") Частые вопросы
+          li
+            a(href="#") Контакты
+
+      .mobile-contacts
+        .mobile-contacts-phone +7 (3467) 92-05-06
+        span.delimiter
+        a(href="#").mobile-contacts-email mbk86@bk.ru
+
+  +header(class="index")
+
+  main.main
+    .main-info
+      .wrapper
+        .title Монтаж фундаментов<br>на винтовых сваях<br>по ХМАО и ЯНАО
+        .bottom
+          .bottom__item 368
+            span готовых фундаментов<br>в Югре и на Ямале
+          .bottom__item 6946
+            span смонтированных<br>винтовых свай
+          .bottom__item >100 лет
+            span реальный срок<br>службы фундамента
+          .bottom__item 24 км
+            span общая длина свай<br>смонитрованных нами
+        .main-info-img
+    .services.wrapper
+      h1.h1 Наши услуги
+      .services__item(style="background-image: url('images/service-1.png')")
+        | Фундамент дома на винтовых сваях
+      .services__item(style="background-image: url('images/service-2.png')")
+        | Услуги ямобура (БКМ)
+      .services__item(style="background-image: url('images/service-3.png')")
+        | Производство винтовых свай
+      a(href="#").button.abs-right Смотреть еще 10 услуг
+    .works-block
+      .wrapper
+        h1.h1 Последние работы
+        .works
+          each item, index in works
+            .works__item(style="background-image: url('images/work-" + (index + 1) + ".png')")
+              span= item
+        a(href="#").button.abs-right Смотреть все работы
+    .partners
+      .swiper-container.wrapper.partners-slider.js-partners-slider
+        .swiper-wrapper
+          each item in [1, 2, 3, 4]
+            a(href="#", style="background-image: url('images/partner-" + item + ".png')").swiper-slide
+        .swiper-pagination
+    .position
+      .position-left
+        form(action="#").form.white
+          h1.h1 Оставьте заявку
+          p Напишите свои контактные данные и наш менеджер свяжется с вами.
+          .form-control
+            input(type="text", id="input-1", placeholder="Имя").form__input
+          .form-control
+            input(type="text", id="input-2", placeholder="Телефон / E-mail").form__input
+          button(type="submit").button Отправить
+      .position-right
+        // подразумевается вставка блока с кодом карты вместо span'а
+        span(style="background-image: url('images/map.png')")
+
+
+
+
+
