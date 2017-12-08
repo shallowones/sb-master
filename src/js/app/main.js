@@ -85,7 +85,6 @@
     // mobile
     {
       const $mobileMenu = $('.mobile-menu')
-
       $('.mobile__button').on('click', () => {
         $('.page').toggleClass('mobile-open')
       })
@@ -119,6 +118,17 @@
             .find('ul').removeAttr('style')
         }
       })
+
+      /*let duration = 300
+      $('.mobile-menu > ul > li, .mobile-contacts').each((index, el) => {
+        $(el).css('transition-delay', duration + 'ms')
+        duration += 100
+      })*/
+    }
+
+    // инициализация слайдера последних работ
+    {
+      new Swiper('.js-works', { slidesPerView: 'auto' })
     }
 
   })

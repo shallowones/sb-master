@@ -37,12 +37,11 @@ html(lang="ru")
       link(rel='stylesheet', href=item)
 
   body
-    include mixins/header
     include mixins/breadcrumbs
 
-    .page
-      block content
-      include includes/footer
+    block content
+
+    include includes/mobile
 
     each item in js
       script(src=item)

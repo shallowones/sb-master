@@ -11,69 +11,41 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div class="page">
-      <div class="mobile">
+    <!-- добавляем класс .index только для главной страницы-->
+    <div class="page index">
+      <header class="header">
         <div class="wrapper">
-          <nav class="mobile-menu">
-            <ul>
-              <li><a href="#">Услуги</a></li>
-              <li><a href="#">О компании</a></li>
-              <li class="parent"><span>Наши работы</span>
-                <ul>
-                  <li class="active"><a href="#">Меню 1</a></li>
-                  <li><a href="#">Меню 2</a></li>
-                  <li><a href="#">Меню 3</a></li>
-                </ul>
-              </li>
-              <li class="parent"><span>Цены</span>
-                <ul>
-                  <li><a href="#">Меню 1</a></li>
-                  <li><a href="#">Меню 2</a></li>
-                  <li><a href="#">Меню 3</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Частые вопросы</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
-          </nav>
-          <div class="mobile-contacts">
-            <div class="mobile-contacts-phone">+7 (3467) 92-05-06</div><span class="delimiter"></span><a class="mobile-contacts-email" href="#">mbk86@bk.ru</a>
+          <button class="mobile__button js-mobile" type="button"><span></span><span></span><span></span><span></span></button><a class="header__logo" href="#"></a>
+          <div class="header-right">
+            <div class="top">
+              <div class="top-left">Винтовые сваи на литых наконечниках, услуги ямобура (БКМ)</div>
+              <div class="top-right"><a href="#">mbk86@bk.ru</a><span>+7 (3467) 92-05-06</span></div>
+            </div>
+            <nav class="menu">
+              <ul>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">О компании</a></li>
+                <li class="parent active"><a href="#">Наши работы</a>
+                  <ul>
+                    <li class="active"><a href="#">Меню 1</a></li>
+                    <li><a href="#">Меню 2</a></li>
+                    <li><a href="#">Меню 3</a></li>
+                  </ul>
+                </li>
+                <li class="parent"><a href="#">Цены</a>
+                  <ul>
+                    <li><a href="#">Меню 1</a></li>
+                    <li><a href="#">Меню 2</a></li>
+                    <li><a href="#">Меню 3</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Частые вопросы</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
-      </div>
-          <header class="header">
-            <div class="wrapper">
-              <button class="mobile__button" type="button"><span></span><span></span><span></span><span></span></button><a class="header__logo" href="#"></a>
-              <div class="header-right">
-                <div class="top">
-                  <div class="top-left">Винтовые сваи на литых наконечниках, услуги ямобура (БКМ)</div>
-                  <div class="top-right"><a href="#">mbk86@bk.ru</a><span>+7 (3467) 92-05-06</span></div>
-                </div>
-                <nav class="menu index">
-                  <ul>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">О компании</a></li>
-                    <li class="parent active"><a href="#">Наши работы</a>
-                      <ul>
-                        <li class="active"><a href="#">Меню 1</a></li>
-                        <li><a href="#">Меню 2</a></li>
-                        <li><a href="#">Меню 3</a></li>
-                      </ul>
-                    </li>
-                    <li class="parent"><a href="#">Цены</a>
-                      <ul>
-                        <li><a href="#">Меню 1</a></li>
-                        <li><a href="#">Меню 2</a></li>
-                        <li><a href="#">Меню 3</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Частые вопросы</a></li>
-                    <li><a href="#">Контакты</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </header>
+      </header>
       <main class="main">
         <div class="main-info">
           <div class="wrapper">
@@ -91,11 +63,13 @@
           <h1 class="h1">Наши услуги</h1>
           <div class="services__item" style="background-image: url('images/service-1.png');">Фундамент дома на винтовых сваях</div>
           <div class="services__item" style="background-image: url('images/service-2.png');">Услуги ямобура (БКМ)</div>
-          <div class="services__item" style="background-image: url('images/service-3.png');">Производство винтовых свай</div><a class="button abs-right" href="#">Смотреть еще 10 услуг</a>
+          <div class="services__item" style="background-image: url('images/service-3.png');">Производство винтовых свай</div>
+          <div class="abs-right"><a class="button" href="#">Смотреть еще 10 услуг</a></div>
         </div>
         <div class="works-block">
           <div class="wrapper">
             <h1 class="h1">Последние работы</h1>
+            <!-- для разрешения ПК-->
             <div class="works">
               <div class="works__item" style="background-image: url('images/work-1.png');"><span>Винтовые сваи — Набережная</span></div>
               <div class="works__item" style="background-image: url('images/work-2.png');"><span>Винтовые сваи — Дорожник</span></div>
@@ -103,7 +77,19 @@
               <div class="works__item" style="background-image: url('images/work-4.png');"><span>Винтовые сваи — Черемхи(2)</span></div>
               <div class="works__item" style="background-image: url('images/work-5.png');"><span>Винтовые сваи — Черемхи</span></div>
               <div class="works__item" style="background-image: url('images/work-6.png');"><span>Винтовые сваи — Черемхи-1</span></div>
-            </div><a class="button abs-right" href="#">Смотреть все работы</a>
+            </div>
+            <!-- для разрешения планшетов и мобилок-->
+            <div class="swiper-container works-mobile js-works">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide works__item" style="background-image: url('images/work-1.png');"><span>Винтовые сваи — Набережная</span></div>
+                <div class="swiper-slide works__item" style="background-image: url('images/work-2.png');"><span>Винтовые сваи — Дорожник</span></div>
+                <div class="swiper-slide works__item" style="background-image: url('images/work-3.png');"><span>Винтовые сваи — Черемхи-1</span></div>
+                <div class="swiper-slide works__item" style="background-image: url('images/work-4.png');"><span>Винтовые сваи — Черемхи(2)</span></div>
+                <div class="swiper-slide works__item" style="background-image: url('images/work-5.png');"><span>Винтовые сваи — Черемхи</span></div>
+                <div class="swiper-slide works__item" style="background-image: url('images/work-6.png');"><span>Винтовые сваи — Черемхи-1</span></div>
+              </div>
+            </div>
+            <div class="abs-right"><a class="button" href="#">Смотреть все работы</a></div>
           </div>
         </div>
         <div class="partners">
@@ -145,6 +131,36 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="mobile">
+      <div class="wrapper">
+        <button class="mobile__button" type="button"><span></span><span></span><span></span><span></span></button>
+        <nav class="mobile-menu">
+          <ul>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">О компании</a></li>
+            <li class="parent"><span>Наши работы</span>
+              <ul>
+                <li class="active"><a href="#">Меню 1</a></li>
+                <li><a href="#">Меню 2</a></li>
+                <li><a href="#">Меню 3</a></li>
+              </ul>
+            </li>
+            <li class="parent"><span>Цены</span>
+              <ul>
+                <li><a href="#">Меню 1</a></li>
+                <li><a href="#">Меню 2</a></li>
+                <li><a href="#">Меню 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Частые вопросы</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-contacts">
+          <div class="mobile-contacts-phone">+7 (3467) 92-05-06</div><span class="delimiter"></span><a class="mobile-contacts-email" href="#">mbk86@bk.ru</a>
+        </div>
+      </div>
     </div>
     <script src="js/vendor/jquery/jquery-3.2.1.min.js"></script>
     <script src="js/vendor/swiper/swiper.min.js"></script>

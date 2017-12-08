@@ -29,155 +29,163 @@ block content
     'Услуги бурильно-крановой машины'
     ]
 
-  +header
+  .page
 
-  main.main
+    include includes/header
 
-    +breadcrumbs('Главная', 'Наши работы', 'Страница стилей')
+    main.main
 
-    .wrapper
-      .detail
-        .detail-left
-          h1.h1 Страница стилей h1
-          p.
-            Цена на винтовые сваи напрямую зависит от их диаметра.
-            Именно из стоимости свай, а также услуг по их монтажу,
-            складывается цена фундамента на винтовых сваях.
-          h2.h2 Заголовок h2
-          p.
-            Разнообразный и богатый опыт укрепление и развитие структуры влечет за собой процесс
-            внедрения и модернизации существенных финансовых и административных условий.
-            Задача организации, в особенности же постоянный количественный рост и сфера
-            нашей активности обеспечивает широкому кругу (специалистов) участие в
-            формировании позиций, занимаемых участниками в отношении поставленных задач.
-          h3.h3 Заголовок h3
-          p.
-            Задача организации, в <a href="#">особенности же укрепление</a> и развитие структуры в значительной
-            степени обуславливает создание системы обучения кадров, соответствует насущным
-            потребностям. Идейные соображения высшего порядка, а также сложившаяся
-            структура организации требуют определения и уточнения дальнейших направлений
-            развития. <a href="#">Значимость этих проблем</a> настолько очевидна, что начало повседневной
-            работы по формированию позиции обеспечивает широкому кругу (специалистов) участие
-            в формировании новых предложений.
-          p.
-            Задача организации, в особенности же постоянное информационно-пропагандистское
-            обеспечение нашей деятельности обеспечивает широкому кругу (специалистов)
-            участие в формировании позиций, занимаемых участниками в отношении поставленных задач.
-          .swiper-container.detail-slider.js-detail-slider
-            .swiper-wrapper
-              .swiper-slide(style="background-image: url('images/detail-slider-1.jpg')")
-              .swiper-slide(style="background-image: url('images/detail-slider-2.jpg')")
-              .swiper-slide(style="background-image: url('images/detail-slider-3.jpg')")
-            .swiper-pagination
-            .swiper-button-next
-            .swiper-button-prev
-          h3.h3 Маркированный список h3
-          ul
-            li Задача организации в <a href="#">особенности укрепления</a>;
-            li Развитие структуры в значительной степени;
-            li Создание системы обучения кадров.
-          h3.h3 Нумернованный список h3
-          ol
-            li Задача организации в <a href="#">особенности укрепления</a>;
-            li Развитие структуры в значительной степени;
-            li Создание системы обучения кадров.
-          h3.h3 Таблица h3
-          table.table
-            tbody
-              tr
-                each number in [1, 2, 3, 4, 5]
-                  th Заголовок
-              each item in tableItems
+      +breadcrumbs('Главная', 'Наши работы', 'Страница стилей')
+
+      .wrapper
+        // класс .with-sidebar для страниц с сайдбаром
+        .detail.with-sidebar
+          .detail-left
+            h1.h1 Страница стилей h1
+            p.
+              Цена на винтовые сваи напрямую зависит от их диаметра.
+              Именно из стоимости свай, а также услуг по их монтажу,
+              складывается цена фундамента на винтовых сваях.
+            h2.h2 Заголовок h2
+            p.
+              Разнообразный и богатый опыт укрепление и развитие структуры влечет за собой процесс
+              внедрения и модернизации существенных финансовых и административных условий.
+              Задача организации, в особенности же постоянный количественный рост и сфера
+              нашей активности обеспечивает широкому кругу (специалистов) участие в
+              формировании позиций, занимаемых участниками в отношении поставленных задач.
+            h3.h3 Заголовок h3
+            p.
+              Задача организации, в <a href="#">особенности же укрепление</a> и развитие структуры в значительной
+              степени обуславливает создание системы обучения кадров, соответствует насущным
+              потребностям. Идейные соображения высшего порядка, а также сложившаяся
+              структура организации требуют определения и уточнения дальнейших направлений
+              развития. <a href="#">Значимость этих проблем</a> настолько очевидна, что начало повседневной
+              работы по формированию позиции обеспечивает широкому кругу (специалистов) участие
+              в формировании новых предложений.
+            p.
+              Задача организации, в особенности же постоянное информационно-пропагандистское
+              обеспечение нашей деятельности обеспечивает широкому кругу (специалистов)
+              участие в формировании позиций, занимаемых участниками в отношении поставленных задач.
+            .swiper-container.detail-slider.js-detail-slider
+              .swiper-wrapper
+                .swiper-slide(style="background-image: url('images/detail-slider-1.jpg')")
+                .swiper-slide(style="background-image: url('images/detail-slider-2.jpg')")
+                .swiper-slide(style="background-image: url('images/detail-slider-3.jpg')")
+              .swiper-pagination
+              .swiper-button-next
+              .swiper-button-prev
+            h3.h3 Маркированный список h3
+            ul
+              li Задача организации в <a href="#">особенности укрепления</a>;
+              li Развитие структуры в значительной степени;
+              li Создание системы обучения кадров.
+            h3.h3 Нумернованный список h3
+            ol
+              li Задача организации в <a href="#">особенности укрепления</a>;
+              li Развитие структуры в значительной степени;
+              li Создание системы обучения кадров.
+            h3.h3 Таблица h3
+            table.table
+              tbody
                 tr
-                  each number in [1, 2, 3, 4]
-                    td= 'Элемент ' + number
-                  td= item
-          .tabs-block
-            .tabs
-              button(type="button", data-target="#files").tabs__button.active.js-tab Файлы
-              button(type="button", data-target="#info").tabs__button.js-tab Информация
-              button(type="button", data-target="#last").tabs__button.js-tab Последний длинный таб
-            .tabs-sections
-              section#files.tabs__section.active
-                a(href="file.docx").file Постоянный количественный рост
-                  span 3Mb
-                a(href="file.xls").file Постоянный количественный рост c названием в две строки
-                  span 3Mb
-                a(href="file.pptx").file Постоянный количественный рост
-                  span 3Mb
-                a(href="file.pdf").file Постоянный количественный рост c названием в две строки
-                  span 3Mb
-              section#info.tabs__section
-                p tab 2
-              section#last.tabs__section
-                p tab 3
-          h3.h3 Аккордеон h3
-          .accordion-block
-            each item, index in accordionItems
-              if (index === 2)
-                .accordion
-                  button(type="button").accordion__button.js-accordion.open= item
-                  section.accordion__section.
-                    Прецессионная теория гироскопов влияет на составляющие гироскопического
-                    момента больше, чем динамический маховик. Гиротахометр учитывает
-                    кинетический момент. В соответствии с законами сохранения энергии,
-                    симметрия ротора требует большего внимания к анализу ошибок, которые даёт
-                    систематический уход. Основание известно. Устойчивость по Ляпунову,
-                    несмотря на внешние воздействия, нестабильна.
+                  each number in [1, 2, 3, 4, 5]
+                    th Заголовок
+                each item in tableItems
+                  tr
+                    each number in [1, 2, 3, 4]
+                      td= 'Элемент ' + number
+                    td= item
+            .tabs-block
+              .tabs
+                button(type="button", data-target="#files").tabs__button.active.js-tab Файлы
+                button(type="button", data-target="#info").tabs__button.js-tab Информация
+                button(type="button", data-target="#last").tabs__button.js-tab Последний длинный таб
+              .tabs-sections
+                section#files.tabs__section.active
+                  a(href="file.docx").file Постоянный количественный рост
+                    span 3Mb
+                  a(href="file.xls").file Постоянный количественный рост c названием в две строки
+                    span 3Mb
+                  a(href="file.pptx").file Постоянный количественный рост
+                    span 3Mb
+                  a(href="file.pdf").file Постоянный количественный рост c названием в две строки
+                    span 3Mb
+                section#info.tabs__section
+                  p tab 2
+                section#last.tabs__section
+                  p tab 3
+            h3.h3 Аккордеон h3
+            .accordion-block
+              each item, index in accordionItems
+                if (index === 2)
+                  .accordion
+                    button(type="button").accordion__button.js-accordion.open= item
+                    section.accordion__section.
+                      Прецессионная теория гироскопов влияет на составляющие гироскопического
+                      момента больше, чем динамический маховик. Гиротахометр учитывает
+                      кинетический момент. В соответствии с законами сохранения энергии,
+                      симметрия ротора требует большего внимания к анализу ошибок, которые даёт
+                      систематический уход. Основание известно. Устойчивость по Ляпунову,
+                      несмотря на внешние воздействия, нестабильна.
+                else
+                  .accordion
+                    button(type="button").accordion__button.js-accordion= item
+                    section.accordion__section.
+                      Прецессионная теория гироскопов влияет на составляющие гироскопического
+                      момента больше, чем динамический маховик. Гиротахометр учитывает
+                      кинетический момент. В соответствии с законами сохранения энергии,
+                      симметрия ротора требует большего внимания к анализу ошибок, которые даёт
+                      систематический уход. Основание известно. Устойчивость по Ляпунову,
+                      несмотря на внешние воздействия, нестабильна.
+            h3.h3 Форма обратной связи h3
+            form(action="#").form
+              .form-flex
+                .form-control
+                  label(for="input-1").form__label Имя
+                  input(type="text", id="input-1", value="Константин").form__input
+                .form-control
+                  label(for="input-2").form__label Активное поле
+                  input(type="text", id="input-2", value="Константиноп").form__input
+              .form-flex
+                .form-control
+                  label(for="input-3").form__label Disabled
+                  input(type="text", id="input-3", disabled).form__input
+                .form-control.invalid
+                  label(for="input-4").form__label Ошибка
+                  input(type="text", id="input-4", value="jorik@mail.ru").form__input
+              .form-flex
+                .form-control
+                  .form__label Checkbox
+                  input(type="checkbox", id="check-1", name="check").form__check
+                  label(for="check-1").form__check-label Константин
+                  input(type="checkbox", id="check-2", name="check", checked).form__check
+                  label(for="check-2").form__check-label Константин
+                .form-control
+                  .form__label Radio
+                  input(type="radio", id="radio-1", name="radio").form__radio
+                  label(for="radio-1").form__radio-label Константин
+                  input(type="radio", id="radio-2", name="radio", checked).form__radio
+                  label(for="radio-2").form__radio-label Константин
+              .form-control
+                label(for="textarea-1").form__label Textarea
+                textarea(id="textarea-1").form__textarea
+              .form-buttons
+                .form-buttons-right
+                  button(type="submit").form__button Отправить
+              .mess
+                i.mess-icon
+                p Ваше сообщение успешно отправлено!
+                button(type="button").form__button.js-close Закрыть
+              // добавить класс .err к сообщению для вывода ошибки
+              .mess.err
+                i.mess-icon
+                p Не удалось отправить сообщение.
+                button(type="button").form__button.js-close Закрыть
+          .sidebar
+            each item, index in sidebarItems
+              if (index === 0)
+                a(href="#").sidebar__item.active= item
               else
-                .accordion
-                  button(type="button").accordion__button.js-accordion= item
-                  section.accordion__section.
-                    Прецессионная теория гироскопов влияет на составляющие гироскопического
-                    момента больше, чем динамический маховик. Гиротахометр учитывает
-                    кинетический момент. В соответствии с законами сохранения энергии,
-                    симметрия ротора требует большего внимания к анализу ошибок, которые даёт
-                    систематический уход. Основание известно. Устойчивость по Ляпунову,
-                    несмотря на внешние воздействия, нестабильна.
-          h3.h3 Форма обратной связи h3
-          form(action="#").form
-            .form-flex
-              .form-control
-                label(for="input-1").form__label Имя
-                input(type="text", id="input-1", value="Константин").form__input
-              .form-control
-                label(for="input-2").form__label Активное поле
-                input(type="text", id="input-2", value="Константиноп").form__input
-            .form-flex
-              .form-control
-                label(for="input-3").form__label Disabled
-                input(type="text", id="input-3", disabled).form__input
-              .form-control.invalid
-                label(for="input-4").form__label Ошибка
-                input(type="text", id="input-4", value="jorik@mail.ru").form__input
-            .form-flex
-              .form-control
-                .form__label Checkbox
-                input(type="checkbox", id="check-1", name="check").form__check
-                label(for="check-1").form__check-label Константин
-                input(type="checkbox", id="check-2", name="check", checked).form__check
-                label(for="check-2").form__check-label Константин
-              .form-control
-                .form__label Radio
-                input(type="radio", id="radio-1", name="radio").form__radio
-                label(for="radio-1").form__radio-label Константин
-                input(type="radio", id="radio-2", name="radio", checked).form__radio
-                label(for="radio-2").form__radio-label Константин
-            .form-buttons
-              .form-buttons-right
-                button(type="submit").form__button Отправить
-            .mess
-              i.mess-icon
-              p Ваше сообщение успешно отправлено!
-              button(type="button").form__button.js-close Закрыть
-            // добавить класс .err к сообщению для вывода ошибки
-            .mess.err
-              i.mess-icon
-              p Не удалось отправить сообщение.
-              button(type="button").form__button.js-close Закрыть
-        .sidebar
-          each item, index in sidebarItems
-            if (index === 0)
-              a(href="#").sidebar__item.active= item
-            else
-              a(href="#").sidebar__item= item
+                a(href="#").sidebar__item= item
+
+    include includes/footer
