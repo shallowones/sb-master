@@ -1282,7 +1282,12 @@ a.breadcrumbs__item {
   }
 
   &__check {
-    display: none;
+    z-index: -1;
+    position: fixed;
+    left: -100%;
+    top: -100%;
+    visibility: hidden;
+    outline: none;
 
     &-label {
       position: relative;
@@ -1340,7 +1345,12 @@ a.breadcrumbs__item {
   }
 
   &__radio {
-    display: none;
+    z-index: -1;
+    position: fixed;
+    left: -100%;
+    top: -100%;
+    visibility: hidden;
+    outline: none;
 
     &-label {
       position: relative;

@@ -1627,7 +1627,12 @@ a.breadcrumbs__item:after {
   background-color: #f8f8f9;
 }
 .form__check {
-  display: none;
+  z-index: -1;
+  position: fixed;
+  left: -100%;
+  top: -100%;
+  visibility: hidden;
+  outline: none;
 }
 .form__check-label {
   position: relative;
@@ -1682,7 +1687,12 @@ a.breadcrumbs__item:after {
   opacity: 1;
 }
 .form__radio {
-  display: none;
+  z-index: -1;
+  position: fixed;
+  left: -100%;
+  top: -100%;
+  visibility: hidden;
+  outline: none;
 }
 .form__radio-label {
   position: relative;
