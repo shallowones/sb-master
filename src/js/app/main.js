@@ -75,7 +75,7 @@
     {
       new Swiper('.js-partners-slider', {
         slidesPerView: 'auto',
-        loop: true,
+        //loop: true,
         pagination: {
           el: '.swiper-pagination'
         }
