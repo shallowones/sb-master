@@ -58,21 +58,26 @@ block content
           .abs-right
             a(href="#").button Смотреть все работы
       .partners
-        .swiper-container.wrapper.partners-slider.js-partners-slider
-          .swiper-wrapper
-            each item in [1, 2, 3, 4]
-              a(href="#", style="background-image: url('images/partner-" + item + ".png')").swiper-slide
-          .swiper-pagination
+        .partners-slider
+          a(href="#", style="background-image: url('images/garant.png')").swiper-slide
       .position
         .position-left
           form(action="#").form.white
             h1.h1 Оставьте заявку
             p Напишите свои контактные данные и наш менеджер свяжется с вами.
-            .form-control
-              input(type="text", id="input-1", placeholder="Имя").form__input
+            .form-control.invalid
+              input(type="text", id="input-1", placeholder="Ваше имя").form__input
             .form-control
               input(type="text", id="input-2", placeholder="Телефон / E-mail").form__input
-            button(type="submit").button Отправить
+            button(type="button").button.load Отправить
+          .mess.main.err.show
+            i.mess-icon
+            p Не удалось отправить сообщение
+            button(type="button").form__button.js-close Закрыть
+          .mess.main
+            i.mess-icon
+            p Ваше сообщение успешно отправлено!
+            button(type="button").form__button.js-close Закрыть
         .position-right
           // подразумевается вставка блока с кодом карты вместо span'а
           span(style="background-image: url('images/map.png')")

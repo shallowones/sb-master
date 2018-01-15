@@ -93,25 +93,29 @@
           </div>
         </div>
         <div class="partners">
-          <div class="swiper-container wrapper partners-slider js-partners-slider">
-            <div class="swiper-wrapper"><a class="swiper-slide" href="#" style="background-image: url('images/partner-1.png');"></a><a class="swiper-slide" href="#" style="background-image: url('images/partner-2.png');"></a><a class="swiper-slide" href="#" style="background-image: url('images/partner-3.png');"></a><a class="swiper-slide" href="#" style="background-image: url('images/partner-4.png');"></a>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
+          <div class="partners-slider"><a class="swiper-slide" href="#" style="background-image: url('images/garant.png');"></a></div>
         </div>
         <div class="position">
           <div class="position-left">
             <form class="form white" action="#">
               <h1 class="h1">Оставьте заявку</h1>
               <p>Напишите свои контактные данные и наш менеджер свяжется с вами.</p>
-              <div class="form-control">
-                <input class="form__input" type="text" id="input-1" placeholder="Имя">
+              <div class="form-control invalid">
+                <input class="form__input" type="text" id="input-1" placeholder="Ваше имя">
               </div>
               <div class="form-control">
                 <input class="form__input" type="text" id="input-2" placeholder="Телефон / E-mail">
               </div>
-              <button class="button" type="submit">Отправить</button>
+              <button class="button load" type="button">Отправить</button>
             </form>
+            <div class="mess main err show"><i class="mess-icon"></i>
+              <p>Не удалось отправить сообщение</p>
+              <button class="form__button js-close" type="button">Закрыть</button>
+            </div>
+            <div class="mess main"><i class="mess-icon"></i>
+              <p>Ваше сообщение успешно отправлено!</p>
+              <button class="form__button js-close" type="button">Закрыть</button>
+            </div>
           </div>
           <div class="position-right">
             <!-- подразумевается вставка блока с кодом карты вместо span'а--><span style="background-image: url('images/map.png');"></span>

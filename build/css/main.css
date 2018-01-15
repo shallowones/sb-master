@@ -459,9 +459,6 @@ html {
   color: #262633;
   overflow-x: hidden;
 }
-body {
-  overflow: hidden;
-}
 .page {
   height: 100%;
   min-height: 100vh;
@@ -498,6 +495,10 @@ body {
     margin-bottom: -220px;
   }*/
 }
+.page.mobile-open {
+  height: 100%;
+  overflow-y: hidden;
+}
 .page.mobile-open .mobile__button span:nth-child(1),
 .page.mobile-open + .mobile .mobile__button span:nth-child(1) {
   top: 12px;
@@ -523,6 +524,10 @@ body {
 .page.mobile-open + .mobile {
   opacity: 1;
   z-index: 100;
+  clip: rect(auto auto auto auto);
+  -webkit-clip-path: none;
+          clip-path: none;
+  visibility: visible;
 }
 .page.mobile-open .header__logo {
   opacity: 0;
@@ -544,6 +549,14 @@ body {
   .page.index .header__logo {
     width: 180px;
     background-position-x: left;
+  }
+}
+@media (max-width: 480px) {
+  .page {
+    height: auto;
+    min-height: initial;
+    display: block;
+    overflow-y: hidden;
   }
 }
 .index-menu {
@@ -673,6 +686,7 @@ button:hover {
 }
 .header {
   position: relative;
+  background-color: #fff;
 }
 .header > .wrapper {
   display: -webkit-box;
@@ -690,7 +704,7 @@ button:hover {
 @media (max-width: 1024px) {
   .header > .wrapper {
     display: block;
-    height: 100%;
+    height: 6.25rem;
   }
 }
 .header__logo {
@@ -739,11 +753,6 @@ button:hover {
 @media (max-width: 1024px) {
   .header:after {
     display: none;
-  }
-}
-@media (max-width: 1024px) {
-  .header {
-    height: 6.25rem;
   }
 }
 .top {
@@ -829,6 +838,13 @@ button:hover {
 @media (max-width: 480px) {
   .main-info {
     background-repeat: no-repeat;
+  }
+}
+@media (max-width: 480px) {
+  .main {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
   }
 }
 .title {
@@ -1590,7 +1606,19 @@ a.breadcrumbs__item:after {
   color: #f25130;
 }
 .form-control.invalid .form__input {
-  border-color: #f25130;
+  border-color: #f25130 !important;
+}
+.form-control.invalid .form__input::-webkit-input-placeholder {
+  color: #f25130 !important;
+}
+.form-control.invalid .form__input::-moz-placeholder {
+  color: #f25130 !important;
+}
+.form-control.invalid .form__input:-ms-input-placeholder {
+  color: #f25130 !important;
+}
+.form-control.invalid .form__input:-moz-placeholder {
+  color: #f25130 !important;
 }
 @media (max-width: 480px) {
   .form-control {
@@ -1791,6 +1819,7 @@ a.breadcrumbs__item:after {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
+  position: relative;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 .form__button:hover {
@@ -1941,6 +1970,22 @@ a.breadcrumbs__item:after {
 }
 .mess.err:after {
   border-bottom-color: #f25130;
+}
+.mess.main {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+}
+.mess.main.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: auto;
+  clip: auto;
+  -webkit-clip-path: initial;
+          clip-path: initial;
 }
 @media (max-width: 1024px) {
   .mess {
@@ -2093,12 +2138,28 @@ a.breadcrumbs__item:after {
   padding: 9px 22px 7px;
   letter-spacing: 1px;
   line-height: inherit;
+  position: relative;
   transition-property: background-color, color;
   transition-duration: .3s;
 }
 .button:hover {
   background-color: #fff;
   color: #3d97f2;
+}
+.button.load:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #3d97f2 url('../images/loading.gif') no-repeat center;
+  background-size: 28px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.button.load:disabled:after {
+  opacity: 1;
 }
 .abs-right {
   position: absolute;
@@ -2247,17 +2308,8 @@ a.breadcrumbs__item:after {
   width: 235px;
   height: 100%;
   background: no-repeat center;
-  opacity: .3;
-  transition: opacity .3s;
-}
-.partners-slider .swiper-slide:hover {
-  opacity: 1;
-}
-@media (max-width: 480px) {
-  .partners-slider .swiper-slide {
-    width: 50%;
-    margin-right: 1rem;
-  }
+  opacity: .9;
+  margin: 0 auto;
 }
 .partners-slider .swiper-pagination-bullet {
   width: 10px;
@@ -2306,6 +2358,7 @@ a.breadcrumbs__item:after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 @media (max-width: 1024px) {
   .position-left {
@@ -2344,6 +2397,11 @@ a.breadcrumbs__item:after {
   opacity: 0;
   transition: all .5s;
   z-index: -1;
+  visibility: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   overflow: hidden;
 }
 .mobile > .wrapper {
