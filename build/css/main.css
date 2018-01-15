@@ -1899,6 +1899,7 @@ a.breadcrumbs__item:after {
   top: 0;
   text-align: center;
   padding: 7rem 2rem 4.125rem;
+  z-index: 1;
 }
 .mess-icon {
   display: block;
@@ -1970,22 +1971,6 @@ a.breadcrumbs__item:after {
 }
 .mess.err:after {
   border-bottom-color: #f25130;
-}
-.mess.main {
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-}
-.mess.main.show {
-  opacity: 1;
-  visibility: visible;
-  z-index: auto;
-  clip: auto;
-  -webkit-clip-path: initial;
-          clip-path: initial;
 }
 @media (max-width: 1024px) {
   .mess {
@@ -2359,6 +2344,17 @@ a.breadcrumbs__item:after {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+}
+.position-left .mess {
+  left: 100%;
+}
+.position-left .mess:after {
+  top: calc(50% - 6px);
+}
+@media (max-width: 1024px) {
+  .position-left .mess {
+    left: 0;
+  }
 }
 @media (max-width: 1024px) {
   .position-left {

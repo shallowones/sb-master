@@ -1,6 +1,8 @@
 (function ($, Swiper) {
   $(function () {
 
+    const $document = $(document)
+
     // инициализация слайдера на детальных страницах
     {
       new Swiper('.js-detail-slider', {
@@ -49,8 +51,8 @@
 
     // фокус инпута
     {
-      $('.form__input')
-        .on('focus', (e) => {
+      $document
+        .on('focus', '.form__input', (e) => {
           const $this = $(e.currentTarget)
           const $parent = $this.parent()
           const invalidClass = 'invalid'
@@ -59,12 +61,12 @@
             $this.on('change', () => { $parent.removeClass(invalidClass) })
           }
         })
-        .on('focusout', (e) => { $(e.currentTarget).parent().removeClass('focus') })
+        .on('focusout', '.form__input', (e) => { $(e.currentTarget).parent().removeClass('focus') })
     }
 
     // закрытие окна уведомления у формы
     {
-      $('.js-close').on('click', (e) => {
+      $document.on('click', '.js-close', (e) => {
         const $this = $(e.currentTarget)
         const $parent = $this.parent()
         $parent.animate({opacity: 0}, 300, () => { $parent.remove() })
@@ -128,7 +130,7 @@
 
     // инициализация слайдера последних работ
     {
-      new Swiper('.js-works', { slidesPerView: 'auto' })
+      new Swiper('.js-works', {slidesPerView: 'auto'})
     }
 
   })

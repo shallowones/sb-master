@@ -1549,6 +1549,7 @@ a.breadcrumbs__item {
   top: 0;
   text-align: center;
   padding: 7rem 2rem 4.125rem;
+  z-index: 1;
 
   &-icon {
     display: block;
@@ -1625,22 +1626,6 @@ a.breadcrumbs__item {
 
     &:after {
       border-bottom-color: #f25130;
-    }
-  }
-
-  &.main {
-    opacity: 0;
-    visibility: hidden;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-
-    &.show {
-      opacity: 1;
-      visibility: visible;
-      z-index: auto;
-      clip: auto;
-      clip-path: initial;
     }
   }
 
@@ -1992,6 +1977,18 @@ a.breadcrumbs__item {
     align-items: flex-end;
     flex-direction: column;
     position: relative;
+
+    & .mess {
+      left: 100%;
+
+      &:after {
+        top: ~"calc(50% - 6px)";
+      }
+
+      @media @plan {
+        left: 0;
+      }
+    }
 
     @media @plan {
       display: block;
