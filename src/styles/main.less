@@ -1932,8 +1932,13 @@ a.breadcrumbs__item {
         width: 235px;
         height: 100%;
         background: no-repeat center;
-        opacity: .9;
+        opacity: .4;
         margin: 0 auto;
+        transition: opacity .3s;
+
+        &:hover {
+          opacity: .9;
+        }
       }
 
       &-pagination {
